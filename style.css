@@ -11,6 +11,10 @@ body {
   color: #111;
 }
 
+p {
+text-align: center;
+}
+
 .score {
   font-family: monospace;
   text-align: center;

@@ -717,7 +717,7 @@ function drop(event) {
 }
 
 // Other Event Listeners
-playAgainBtn.addEventListener("click", playAgainBtnClick);
+playAgainBtn.addEventListener("click", "touchstart", playAgainBtnClick);
 function playAgainBtnClick() {
   playAgainBtn.classList.remove("play-again-btn-entrance");
   correct = 0;

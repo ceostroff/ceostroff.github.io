@@ -1,268 +1,312 @@
 const brands = [
   {
     iconName: "alicorn",
-    brandName: "Flunixin-meglumine ",
+    iconType: "fas fa",
+    brandName: "Flunixin-meglumine",
     color: "#ff0000", // red
     iconDescription: "I'm a unicorn with abdominal pain. I need a drug that can also be used in cattle and will inhibit Cox-1 and Cox 2."
   },
   {
-    iconName: "horse",
+    iconName: "alicorn",
+    iconType: "far fa",
     brandName: "Phenylbutazone",
     color: "#fd5c63",
-    iconDescription: "I'm a horse  with muscle pain. I need an anti-inflamatory that can only be given by IV or PO. My friend Harold the cow cannot have it, nor can the beagle I keep nearly stepping on."
+    iconDescription: "I'm a unicorn  with muscle pain. I need an anti-inflamatory that can only be given by IV or PO. My friend Harold the cow cannot have it, nor can the beagle I keep nearly stepping on."
   },
   {
-    iconName: "horse-head",
+    iconName: "alicorn",
+    iconType: "fal fa",
     brandName: "Ketoprofen",
     color: "#333333",
-    iconDescription: "I'm a horse with some leg pain. I don't have a fever so a pill with a longer duration administration is fine."
+    iconDescription: "I'm a unicorn with some leg pain. I don't have a fever so a pill with a longer duration administration is fine."
   },
   {
-    iconName: "horse-saddle",
+    iconName: "alicorn",
+    iconType: "fad fa",
     brandName: "Firocoxib",
     color: "#a4c639",
-    iconDescription: "I'm a horse with arthritis. I need a COX-2 inhibitor to help with pain. I believe my canine friends can use this, too."
+    iconDescription: "I'm a unicorn with arthritis. I need a COX-2 inhibitor to help with pain. I believe my canine friends can use this, too."
   },
   {
-    iconName: "dragon",
+    iconName: "cow",
+    iconType: "fas fa",
     brandName: "Cortisone",
     color: "#000000",
-    iconDescription: "I'm a dragon who used to zoom around the track. I still sometimes get pain and swelling from my glory days. I need a short-acting corticosteroid to manage my pain."
+    iconDescription: "I'm a cow who used to zoom around the track. I still sometimes get pain and swelling from my glory days. I need a short-acting corticosteroid to manage my pain."
   },
   {
     iconName: "dog",
+    iconType: "fas fa",
     brandName: "Prednisone",
     color: "#b52e31",
     iconDescription: "Hi, I'm Honey Belle. I enjoy running on concrete and destroying my toe pads. I need something to help with inflammation. My daddy says Caitlin uses this too when she's speckled."
   },
   {
-    iconName: "elephant",
+    iconName: "cow",
+    iconType: "far fa",
     brandName: "Prednisolone",
     color: "#5fc9f8",
-    iconDescription: "I'm an elephant with recurrent airway obstruction, a thing Caitlin just Googled that is apparently a respitory disease. I need an immediate-acting corticosteroid."
-  },
-  {
-    iconName: "narwhal",
-    brandName: "Dexamethasone",
-    color: "#aaaaaa",
-    iconDescription: "I'm a narwhal who is having an allergic reaction. I am speckled and everything itches, from head to hoof. I need a long-acting corticosteroid."
-  },
-  {
-    iconName: "monkey",
-    brandName: "Lidocaine",
-    color: "#d4af37",
-    iconDescription: "I'm a monkey and I need a drug that can be a local anesthetic or used as an antiinflamatory to inhibit leukocyte migration and cytokine response."
-  },
-  {
-    iconName: "hippo",
-    brandName: "Tiludronate",
-    color: "#000000",
-    iconDescription: "I'm a horse who needs IV treatment for navicular disease."
-  },
-  {
-    iconName: "pegasus",
-    brandName: "Dimethyl Sulfoxide",
-    color: "#f57d00",
-    iconDescription: "I'm a pegasus and I need antiinflammatories. I need something that will penetrate through my cell membranes almost as easily as water. My cow friends tell me that it's very illegal to share with them—they don't even have it on their farms."
+    iconDescription: "I'm a cow with recurrent airway obstruction, a thing Caitlin just Googled that is apparently a respitory disease. I need an immediate-acting corticosteroid."
   },
   {
     iconName: "deer",
-    brandName: "Bethanechol",
-    color: "#3b5998",
-    iconDescription: "I'm a deer with who needs a medicine to stimulate detrusor muscle contraction to treat my atony."
+    iconType: "fal fa",
+    brandName: "Dexamethasone",
+    color: "#aaaaaa",
+    iconDescription: "I'm a cow who is having an allergic reaction. I am speckled and everything itches, from head to hoof. I need a long-acting corticosteroid."
   },
   {
-    iconName: "dog-leashed",
+    iconName: "cow",
+    iconType: "fad fa",
+    brandName: "Lidocaine",
+    color: "#d4af37",
+    iconDescription: "I'm a cow and I need a drug that can be a local anesthetic or used as an antiinflamatory to inhibit leukocyte migration and cytokine response."
+  },
+  {
+    iconName: "deer",
+    iconType: "fas fa",
+    brandName: "Tiludronate",
+    color: "#000000",
+    iconDescription: "I'm a deer who needs IV treatment for navicular disease."
+  },
+  {
+    iconName: "deer",
+    iconType: "far fa",
+    brandName: "Dimethyl Sulfoxide",
+    color: "#f57d00",
+    iconDescription: "I'm a deer and I need antiinflammatories. I need something that will penetrate through my cell membranes almost as easily as water. My cow friends tell me that it's very illegal to share with them—they don't even have it on their farms."
+  },
+  {
+    iconName: "dog",
+    iconType: "far fa",
+    brandName: "Bethanechol",
+    color: "#3b5998",
+    iconDescription: "I'm a dog with who needs a medicine to stimulate detrusor muscle contraction to treat my atony."
+  },
+  {
+    iconName: "dog",
+    iconType: "fal fa",
     brandName: "Neostigmine",
     color: "#553c7b",
     iconDescription: "I'm a good boi who needs something to treat my ruminal atony initiating peristaslsis and stimulating GI motility."
   },
   {
-    iconName: "otter",
+    iconName: "dog",
+    iconType: "fad fa",
     brandName: "Edrophonium",
     color: "#333333",
-    iconDescription: "I'm an otter with myasthenia gravis, which Caitlin just learned is a neuromuscular disorder. I need a short-acting acetylcholinesterase antagonist to treat me."
-  },
-  {
-    iconName: "paw",
-    brandName: "Pyridostigmine",
-    color: "#111111",
-    iconDescription: "I'm a dog with myasthenia gravis, and I need a acetylcholinesterase antagonist to help with long-term management of my disorder."
-  },
-  {
-    iconName: "paw-alt",
-    brandName: "Atropine",
-    color: "#ff6c2c",
-    iconDescription: "I'm a dog with bradycardia. I need a parasympatholytic for treatment."
-  },
-  {
-    iconName: "dog",
-    brandName: "Glycopyrrolate",
-    color: "#264de4",
-    iconDescription: "I'm a dog in need of a longer-lasting version of atropine. My bunny friends also use this."
-  },
-  {
-    iconName: "badger-honey",
-    brandName: "Oxybutynin",
-    color: "#111111",
-    iconDescription: "I'm a honey badger with a hyperactive bladder. I need a GI and urinary antispasmodic agent to help with it that is able to cross BBB."
+    iconDescription: "I'm a doggo with myasthenia gravis, which Caitlin just learned is a neuromuscular disorder. I need a short-acting acetylcholinesterase antagonist to treat me."
   },
   {
     iconName: "cat",
+    iconType: "fas fa",
+    brandName: "Pyridostigmine",
+    color: "#111111",
+    iconDescription: "I'm a cat with myasthenia gravis, and I need a acetylcholinesterase antagonist to help with long-term management of my disorder."
+  },
+  {
+    iconName: "cat",
+    iconType: "far fa",
+    brandName: "Atropine",
+    color: "#ff6c2c",
+    iconDescription: "I'm a cat with bradycardia. I need a parasympatholytic for treatment."
+  },
+  {
+    iconName: "rabbit",
+    iconType: "fas fa",
+    brandName: "Glycopyrrolate",
+    color: "#264de4",
+    iconDescription: "I'm a rabbit in need of a longer-lasting version of atropine."
+  },
+  {
+    iconName: "cat",
+    iconType: "fal fa",
+    brandName: "Oxybutynin",
+    color: "#111111",
+    iconDescription: "I'm a cat with a hyperactive bladder. I need a GI and urinary antispasmodic agent to help with it that is able to cross BBB."
+  },
+  {
+    iconName: "cat",
+    iconType: "fad fa",
     brandName: "Propantheline",
     color: "#ba0c2f",
     iconDescription: "I'm a cat with a hyperactive bladder. I need a GI and urinary antispasmodic agent to help with it that is NOT able to cross BBB."
   },
-  // {
-  //   iconName: "digital-ocean",
-  //   brandName: "DigitalOcean",
-  //   color: "#008bcf",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "discord",
-  //   brandName: "Discord",
-  //   color: "#7289da",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "docker",
-  //   brandName: "Docker",
-  //   color: "#0db7ed",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "dribbble",
-  //   brandName: "Dribbble",
-  //   color: "#ea4c89",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "dropbox",
-  //   brandName: "Dropbox",
-  //   color: "#007ee5",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "drupal",
-  //   brandName: "Drupal",
-  //   color: "#0077c0",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "ebay",
-  //   brandName: "eBay",
-  //   color: "#333333",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "edge",
-  //   brandName: "Microsoft Edge",
-  //   color: "#0078d7",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "ember",
-  //   brandName: "Ember.js",
-  //   color: "#f23819",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "ethereum",
-  //   brandName: "Ethereum",
-  //   color: "#666666",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "etsy",
-  //   brandName: "Etsy",
-  //   color: "#d5641c",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "evernote",
-  //   brandName: "Evernote",
-  //   color: "#2dbe60",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "facebook-square",
-  //   brandName: "Facebook",
-  //   color: "#3b5998",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "fedex",
-  //   brandName: "FedEx",
-  //   color: "#4d148c",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "firefox",
-  //   brandName: "Firefox",
-  //   color: "#e66000",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "font-awesome",
-  //   brandName: "Font Awesome",
-  //   color: "#228ae6",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "free-code-camp",
-  //   brandName: "freeCodeCamp",
-  //   color: "#006400",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "git-alt",
-  //   brandName: "Git",
-  //   color: "#f1502f",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "github",
-  //   brandName: "GitHub",
-  //   color: "#333333",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "google",
-  //   brandName: "Google",
-  //   color: "#333333",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "google-play",
-  //   brandName: "Google Play",
-  //   color: "#3bccff",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "grunt",
-  //   brandName: "Grunt",
-  //   color: "#fba919",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "gulp",
-  //   brandName: "gulp.js",
-  //   color: "#db4446",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "html5",
-  //   brandName: "HTML5",
-  //   color: "#e34f26",
-  //   iconDescription: "I'm a thing"
-  // },
-  // {
-  //   iconName: "imdb",
-  //   brandName: "IMDb",
-  //   color: "#dba506",
-  //   iconDescription: "I'm a thing"
-  // },
+  {
+    iconName: "cat-space",
+    iconType: "fas fa",
+    brandName: "Epinephrine",
+    color: "#008bcf",
+    iconDescription: "I'm a space cat experiencing anaphylaxis shock upon entering Earth's orbit. I need a sympathomimetic."
+  },
+  {
+    iconName: "cat-space",
+    iconType: "far fa",
+    brandName: "Norepinephrine",
+    color: "#008bcf",
+    iconDescription: "I'm a space cat who needs a vasopressor as treatment for hypotension. I need a sympathomimetic."
+  },
+  {
+    iconName: "cat-space",
+    iconType: "fal fa",
+    brandName: "Isoproterenol",
+    color: "#008bcf",
+    iconDescription: "I'm a space cat with bronchial asthma who needs a sympathomimetic treatment that causes positive inotropic/chronotropic effects."
+  },
+  {
+    iconName: "cat-space",
+    iconType: "fad fa",
+    brandName: "Dopamine",
+    color: "#008bcf",
+    iconDescription: "I'm a space cat with hypotension from inadequate vascular tone. I need a sympathomimetic."
+  },
+  {
+    iconName: "dog-leashed",
+    iconType: "fas fa",
+    brandName: "Dobutamine",
+    color: "#008bcf",
+    iconDescription: "I'm a dog who needs treatment for of anesthesia-induced hypotension where positive inotropic effect is needed for perfusion."
+  },
+  {
+    iconName: "dog-leashed",
+    iconType: "far fa",
+    brandName: "Phenylephrine",
+    color: "#008bcf",
+    iconDescription: "I'm a dog who needs a sympathomimetic to increase my peripheral vascular tone."
+  },
+  {
+    iconName: "cow",
+    iconType: "fal fa",
+    brandName: "Ractopamine &  Zilpaterol",
+    color: "#008bcf",
+    iconDescription: "I'm a cow who needs to bulk up to increase my deposition of lean muscle. Is it legal? Who knows."
+  },
+  {
+    iconName: "dog-leashed",
+    iconType: "fal fa",
+    brandName: "Albuterol & Terbutaline & Clenbuterol",
+    color: "#008bcf",
+    iconDescription: "I'm a dog who needs selective B2 agonists for treatment of asthma."
+  },
+  {
+    iconName: "dog-leashed",
+    iconType: "fad fa",
+    brandName: "Selegenline",
+    color: "#f23819",
+    iconDescription: "I'm a dog who needs treatment for canine cognitive dysfunction. I need an MAOI."
+  },
+  {
+    iconName: "paw",
+    iconType: "fas fa",
+    brandName: "Ephedrine",
+    color: "#f23819",
+    iconDescription: "I'm a dog who needs a CRI for BP maintenance under anesthesia. What drug can you give me?"
+  },
+  {
+    iconName: "paw",
+    iconType: "far fa",
+    brandName: "Phenylpropanolamine",
+    color: "#f23819",
+    iconDescription: "I'm a dog who needs treatment for urinary incontinence. I need a sympathomimetic."
+  },
+  {
+    iconName: "paw",
+    iconType: "fal fa",
+    brandName: "Phenoxybenzamine",
+    color: "#f23819",
+    iconDescription: "I'm a dog who needs treatment for hypertension from pheochromocytoma before surgery. I need a sympatholytic."
+  },
+  {
+    iconName: "paw",
+    iconType: "fad fa",
+    brandName: "Prazosin",
+    color: "#f23819",
+    iconDescription: "I'm a cat who needs treatment for feline lower urinary tract disease. What can I have?"
+  },
+  {
+    iconName: "paw-alt",
+    iconType: "fas fa",
+    brandName: "Tamsulosin",
+    color: "#f23819",
+    iconDescription: "I'm a dog with nephro/urolith who needs a sympatholytic to relax the smooth muscles of my urinary tract."
+  },
+  {
+    iconName: "paw-alt",
+    iconType: "far fa",
+    brandName: "Propranolol",
+    color: "#f23819",
+    iconDescription: "I'm a cat who needs treatment of arrhythmias from feline hyperthyroid disease."
+  },
+  {
+    iconName: "paw-alt",
+    iconType: "fal fa",
+    brandName: "Atenolol",
+    color: "#f23819",
+    iconDescription: "I'm a dog who needs a drug similar to Propranolol but with a longer half life and without risk of bronchoconstriction."
+  },
+  {
+    iconName: "horse",
+    iconType: "fas fa",
+    brandName: "Reserpine",
+    color: "#f23819",
+    iconDescription: "I'm a horse who needs to be calmed by blocking NE uptake into my vesicles."
+  },
+  {
+    iconName: "ram",
+    iconType: "fas fa",
+    brandName: "Lidocaine",
+    color: "#f23819",
+    iconDescription: "I'm a ram who needs the most common local anesthetic which is also a sodium channel blocker."
+  },
+  {
+    iconName: "ram",
+    iconType: "far fa",
+    brandName: "Bupivacaine",
+    color: "#f23819",
+    iconDescription: "I'm a ram who need a long-lasting local anesthetic (at least 8 hours)."
+  },
+  {
+    iconName: "paw-alt",
+    iconType: "fad fa",
+    brandName: "Proparacaine",
+    color: "#f23819",
+    iconDescription: "I'm a cat who needs a local anesthetic with a very short half life that will only work for a few minutes as an eyedrop."
+  },
+  {
+    iconName: "ram",
+    iconType: "fad fa",
+    brandName: "Mepivacaine",
+    color: "#f23819",
+    iconDescription: "I'm a ram who needs a local anesthetic that is most commonly used for lameness exams in horses."
+  },
+  {
+    iconName: "ram",
+    iconType: "fal fa",
+    brandName: "Tetracaine",
+    color: "#f23819",
+    iconDescription: "I'm a ram who needs a short-term local anesthetic, similar to Proparacaine, but used in large animals."
+  },
+  {
+    iconName: "ember",
+    iconType: "fad fa",
+    brandName: "Ember.js",
+    color: "#f23819",
+    iconDescription: "I'm a thing"
+  },
+  {
+    iconName: "ember",
+    iconType: "fad fa",
+    brandName: "Ember.js",
+    color: "#f23819",
+    iconDescription: "I'm a thing"
+  },
+  {
+    iconName: "ember",
+    iconType: "fad fa",
+    brandName: "Ember.js",
+    color: "#f23819",
+    iconDescription: "I'm a thing"
+  },
   // {
   //   iconName: "instagram",
   //   brandName: "Instagram",
@@ -623,21 +667,23 @@ function initiateGame() {
   const alphabeticallySortedRandomDroppableBrands = [...randomDroppableBrands].sort((a,b) => a.brandName.toLowerCase().localeCompare(b.brandName.toLowerCase()));
 
   // Create "draggable-items" and append to DOM
+  // Change icon id from the iconname
   for(let i=0; i<randomDraggableBrands.length; i++) {
     draggableItems.insertAdjacentHTML("beforeend", `
       <div class="content">
-      <i class="far fa-${randomDraggableBrands[i].iconName} draggable" draggable="true" style="color: ${randomDraggableBrands[i].color};" id="${randomDraggableBrands[i].iconName}"></i>
+      <i class="${randomDraggableBrands[i].iconType}-${randomDraggableBrands[i].iconName} draggable" draggable="true" style="color: ${randomDraggableBrands[i].color};" id="${randomDraggableBrands[i].brandName}"></i>
       <p class="description">${randomDraggableBrands[i].iconDescription}</p>
       </div>
     `);
   }
 
   // Create "matching-pairs" and append to DOM
+  // Change icon id from the iconname
   for(let i=0; i<alphabeticallySortedRandomDroppableBrands.length; i++) {
     matchingPairs.insertAdjacentHTML("beforeend", `
       <div class="matching-pair">
         <span class="label">${alphabeticallySortedRandomDroppableBrands[i].brandName}</span>
-        <span class="droppable" data-brand="${alphabeticallySortedRandomDroppableBrands[i].iconName}"></span>
+        <span class="droppable" data-brand="${alphabeticallySortedRandomDroppableBrands[i].brandName}"></span>
       </div>
     `);
   }
@@ -687,6 +733,7 @@ function dragLeave(event) {
   }
 }
 
+// change me
 function drop(event) {
   event.preventDefault();
   event.target.classList.remove("droppable-hover");
@@ -699,7 +746,8 @@ function drop(event) {
     event.target.classList.add("dropped");
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
-    event.target.innerHTML = `<i class="far fa-${draggableElementBrand}" style="color: ${draggableElement.style.color};"></i>`;
+    const draggableElementID = draggableElement.getAttribute("class");
+    event.target.innerHTML = `<i class="${draggableElementID}" style="color: ${draggableElement.style.color};"></i>`;
     correct++;
   }
   scoreSection.style.opacity = 0;

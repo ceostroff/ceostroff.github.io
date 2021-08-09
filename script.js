@@ -286,27 +286,6 @@ const brands = [
     color: "#f23819",
     iconDescription: "I'm a ram who needs a short-term local anesthetic, similar to Proparacaine, but used in large animals."
   },
-  {
-    iconName: "ember",
-    iconType: "fad fa",
-    brandName: "Ember.js",
-    color: "#f23819",
-    iconDescription: "I'm a thing"
-  },
-  {
-    iconName: "ember",
-    iconType: "fad fa",
-    brandName: "Ember.js",
-    color: "#f23819",
-    iconDescription: "I'm a thing"
-  },
-  {
-    iconName: "ember",
-    iconType: "fad fa",
-    brandName: "Ember.js",
-    color: "#f23819",
-    iconDescription: "I'm a thing"
-  },
   // {
   //   iconName: "instagram",
   //   brandName: "Instagram",

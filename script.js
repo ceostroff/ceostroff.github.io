@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let pinnedEvents = {}; // Stores pinned events by time slot
 
     // Fetch the latest JSON data from the web
-    fetch('https://schedules.ire.org/nicar-2025/nicar-2025-schedule.json')
-        .then(response => response.json())
-        .then(data => {
-            scheduleData = processScheduleData(data);
-            renderSchedule();
-        })
-        .catch(error => console.error('Error loading schedule data:', error));
+    fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://schedules.ire.org/nicar-2025/nicar-2025-schedule.json'))
+    .then(response => response.json())
+    .then(data => {
+        const jsonData = JSON.parse(data.contents); // Extract actual JSON
+        scheduleData = processScheduleData(jsonData);
+        renderSchedule();
+    })
+    .catch(error => console.error('Error loading schedule data:', error));
+
 
     // Convert raw JSON into grouped schedule data by time slots
     function processScheduleData(data) {

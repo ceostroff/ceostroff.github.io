@@ -4,10 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let scheduleData = [];
     let pinnedEvents = {}; // Stores pinned events by time slot
 
-  fetch("https://raw.githubusercontent.com/ceostroff/ceostroff.github.io/main/schedule.json")
+ fetch("https://raw.githubusercontent.com/ceostroff/ceostroff.github.io/main/schedule.json")
   .then(response => response.json())
-  .then(data => console.log("Loaded Schedule:", data))
+  .then(data => {
+      console.log("Loaded Schedule:", data); // Debugging
+      scheduleData = processScheduleData(data); // Process and store schedule
+      renderSchedule(); // ✅ Now call renderSchedule to update the page
+  })
   .catch(error => console.error("Error fetching schedule:", error));
+
 
 
 

@@ -4,17 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let scheduleData = [];
     let pinnedEvents = {}; // Stores pinned events by time slot
 
- fetch("https://raw.githubusercontent.com/ceostroff/ceostroff.github.io/main/schedule.json")
-  .then(response => response.json())
-  .then(data => {
-      console.log("Loaded Schedule:", data); // Debugging
-      scheduleData = processScheduleData(data); // Process and store schedule
-      renderSchedule(); // ✅ Now call renderSchedule to update the page
-  })
-  .catch(error => console.error("Error fetching schedule:", error));
-
-
-
+    // Fetch and process schedule data
+    fetch("https://raw.githubusercontent.com/ceostroff/ceostroff.github.io/main/schedule.json")
+        .then(response => response.json())
+        .then(data => {
+            console.log("Loaded Schedule:", data); // Debugging log
+            scheduleData = processScheduleData(data);
+            renderSchedule();
+        })
+        .catch(error => console.error("Error fetching schedule:", error));
 
     // Convert raw JSON into grouped schedule data by time slots
     function processScheduleData(data) {
@@ -28,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             groupedData[time].events.push(event);
         });
 
+        console.log("Processed Schedule Data:", groupedData); // Debugging log
         return Object.values(groupedData).sort((a, b) => new Date(a.time) - new Date(b.time));
     }
 
@@ -48,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     ` : ''}
                     ${timeSlot.events
-                        .filter(event => !pinnedEvent || event.id !== pinnedEvent.id)
+                        .filter(event => !pinnedEvent || event.session_id !== pinnedEvent.id)
                         .map(event => `
-                            <div class="event" data-event-id="${event.id}">
-                                <span>${event.title}</span>
+                            <div class="event" data-event-id="${event.session_id}">
+                                <span>${event.session_title || "Untitled Event"}</span>
                                 <button class="pin">Pin</button>
                             </div>
                         `).join('')}
@@ -69,7 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const eventElement = e.target.closest('.event');
                 const eventId = eventElement.getAttribute('data-event-id');
                 const timeSlot = eventElement.closest('.time-slot').querySelector('h2').textContent;
-                const eventTitle = eventElement.querySelector('span').textContent;
+                
+                const eventTitle = scheduleData
+                    .flatMap(slot => slot.events)
+                    .find(e => e.session_id.toString() === eventId)?.session_title || "Unknown Event";
 
                 pinnedEvents[timeSlot] = { id: eventId, title: eventTitle };
                 renderSchedule();
@@ -91,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scheduleContainer.innerHTML = '';
 
         scheduleData.forEach(timeSlot => {
-            const matchingEvents = timeSlot.events.filter(event => event.title.toLowerCase().includes(query));
+            const matchingEvents = timeSlot.events.filter(event => event.session_title.toLowerCase().includes(query));
             if (matchingEvents.length > 0 || pinnedEvents[timeSlot.time]) {
                 const pinnedEvent = pinnedEvents[timeSlot.time];
                 const timeSlotDiv = document.createElement('div');
@@ -106,10 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         ` : ''}
                         ${matchingEvents
-                            .filter(event => !pinnedEvent || event.id !== pinnedEvent.id)
+                            .filter(event => !pinnedEvent || event.session_id !== pinnedEvent.id)
                             .map(event => `
-                                <div class="event" data-event-id="${event.id}">
-                                    <span>${event.title}</span>
+                                <div class="event" data-event-id="${event.session_id}">
+                                    <span>${event.session_title || "Untitled Event"}</span>
                                     <button class="pin">Pin</button>
                                 </div>
                             `).join('')}
